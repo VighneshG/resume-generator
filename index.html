@@ -1,101 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customizable CV Template</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
-    <script src="script.js"></script>
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
 </head>
-
 <body>
+    <div class="sidebar">
+        <h2>Choose Fonts</h2>
+        <label for="headingFont">Heading Font:</label>
+        <select id="headingFont">
+            <option value="Arial">Arial</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Calibri">Calibri</option>
+            <option value="Helvetica">Helvetica</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Garamond">Garamond</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Trebuchet MS">Trebuchet MS</option>
+        </select>
+
+        <label for="contentFont">Content Font:</label>
+        <select id="contentFont">
+            <option value="Arial">Arial</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Calibri">Calibri</option>
+            <option value="Helvetica">Helvetica</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Garamond">Garamond</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Trebuchet MS">Trebuchet MS</option>
+        </select>
+    </div>
     <div class="cv-container">
         <header>
-            <h1 id="name">Your Name</h1>
+            <h1 id="name" contenteditable="true">Your Name</h1>
             <div class="contact-info">
                 <img src="images/icons/linkedin.png" alt="LinkedIn">
-                <span id="linkedin">username</span>
+                <span id="linkedin" contenteditable="true">username</span>
                 <img src="images/icons/github.png" alt="GitHub">
-                <span id="github">username</span>
+                <span id="github" contenteditable="true">username</span>
                 <img src="images/icons/website.png" alt="Website">
-                <span id="website">mysite.com</span>
+                <span id="website" contenteditable="true">mysite.com</span>
                 <img src="images/icons/email.png" alt="Email">
-                <span id="email">email@mysite.com</span>
-                <span id="phone">+00.00.000.000</span>
+                <span id="email" contenteditable="true">email@mysite.com</span>
+                <span id="phone" contenteditable="true">+00.00.000.000</span>
             </div>
         </header>
 
         <section id="summary">
             <h2>Summary</h2>
-            <p>This CV can also be automatically compiled and published using GitHub Actions. For details, <a
-                    href="#">click here</a>.</p>
+            <p contenteditable="true">This CV can also be automatically compiled and published using GitHub Actions. For details, <a href="#">click here</a>.</p>
         </section>
 
         <section id="work-experience">
             <h2>Work Experience</h2>
             <div class="job">
-                <h3>Designation</h3>
-                <span class="date">Jan 2021 - present</span>
-                <p>long long line of blah blah...</p>
+                <h3 contenteditable="true">Designation</h3>
+                <span class="date" contenteditable="true">Jan 2021 - present</span>
+                <p contenteditable="true">long long line of blah blah that will wrap when the table fills the column width...</p>
             </div>
             <div class="job">
-                <h3>Designation</h3>
-                <span class="date">Mar 2019 - Jan 2021</span>
-                <p>long long line of blah blah...</p>
+                <h3 contenteditable="true">Designation</h3>
+                <span class="date" contenteditable="true">Mar 2019 - Jan 2021</span>
+                <p contenteditable="true">long long line of blah blah that will wrap when the table fills the column width...</p>
             </div>
         </section>
 
         <section id="projects">
             <h2>Projects</h2>
             <div class="project">
-                <h3>Some Project</h3>
-                <a href="#" class="demo-link">Link to Demo</a>
-                <p>long long line of blah blah...</p>
+                <h3 contenteditable="true">Some Project</h3>
+                <a href="#" class="demo-link" contenteditable="true">Link to Demo</a>
+                <p contenteditable="true">long long line of blah blah that will wrap when the table fills the column width...</p>
             </div>
         </section>
 
         <section id="education">
             <h2>Education</h2>
             <div class="education-item">
-                <span>2030 - present</span>
-                <span>PhD (Subject) at <strong>University</strong></span>
-                <span>(GPA: 4.0/4.0)</span>
+                <span contenteditable="true">2030 - present</span>
+                <span contenteditable="true">PhD (Subject) at <strong>University</strong></span>
+                <span contenteditable="true">(GPA: 4.0/4.0)</span>
             </div>
             <div class="education-item">
-                <span>2023 - 2027</span>
-                <span>Bachelor's Degree at <strong>College</strong></span>
-                <span>(GPA: 4.0/4.0)</span>
+                <span contenteditable="true">2023 - 2027</span>
+                <span contenteditable="true">Bachelor's Degree at <strong>College</strong></span>
+                <span contenteditable="true">(GPA: 4.0/4.0)</span>
             </div>
         </section>
 
         <section id="publications">
             <h2>Publications</h2>
             <div class="publication">
-                <p>Last Name, First Name... <a href="https://some-link.com">URL</a></p>
+                <p contenteditable="true">Last Name, First Name and First Name Other Last Name (Sept. 2019). “Paper: This is the name of the paper”. In: Some Journal 99.18, pp. 2200-2300. <a href="https://some-link.com" contenteditable="true">URL</a></p>
             </div>
             <div class="publication">
-                <p>Last Name, First Name... <a href="https://some-other-link.com">URL</a></p>
+                <p contenteditable="true">Last Name, First Name and First Name Again Last Name (Sept. 2022). “Paper II: This is another paper”. In: Some Journal 99.18, pp. 2200-2300. <a href="https://some-other-link.com" contenteditable="true">URL</a></p>
             </div>
         </section>
 
         <section id="skills">
             <h2>Skills</h2>
-            <p>Some Skills: This, That, Some of this and that etc.</p>
-            <p>Some More Skills: Also some more of this, Some more that...</p>
+            <p contenteditable="true">Some Skills: This, That, Some of this and that etc.</p>
+            <p contenteditable="true">Some More Skills: Also some more of this, Some more that...</p>
         </section>
 
-
         <footer>
-            <p>Last updated: March 27, 2024</p>
+            <p contenteditable="true">Last updated: March 27, 2024</p>
             <button id="downloadBtn">Download as PDF</button>
         </footer>
-
     </div>
     <script src="script.js"></script>
 </body>
-
 </html>

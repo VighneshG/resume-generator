@@ -5,10 +5,11 @@ This is a customizable CV template that users can edit and download.
 ## How to Use
 
 1. Clone this repository.
-2. Open `index.html` in a text editor to edit the template.
-3. Modify the content in `index.html`, `style.css`, and `script.js` as needed.
-4. Open `index.html` in a web browser to view the CV.
-5. Icons should be placed in the `images/icons/` directory.
+2. Open `index.html` in a web browser to view and edit the CV.
+3. Click on any text to edit it in place.
+4. Use the dropdown menus at the top to select fonts for headings and content.
+5. Click the "Download as PDF" button at the bottom of the page to download the CV as a PDF.
+6. Icons should be placed in the `images/icons/` directory.
 
 ## Hosting on GitHub Pages
 
@@ -18,12 +19,7 @@ This is a customizable CV template that users can edit and download.
 
 ## Customization
 
-You can customize various sections of the CV by editing the HTML, CSS, and JavaScript files.
-
-## Downloading the CV
-
-1. Customize the CV content as needed.
-2. Click the "Download as PDF" button at the bottom of the page to download the CV as a PDF.
+You can customize various sections of the CV by clicking on the text and editing it directly in the browser.
 
 ## License
 
